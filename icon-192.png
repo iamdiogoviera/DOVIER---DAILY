@@ -1,0 +1,232 @@
+export interface Exercise {
+  id: string
+  name: string
+  target: string
+  howTo: string[]
+  muscles: string[]
+  mistakes: string[]
+  tips: string[]
+}
+
+export const EXERCISES: Exercise[] = [
+  {
+    id: "flexoes",
+    name: "Flexões",
+    target: "Peito · Tríceps",
+    howTo: [
+      "Coloca as mãos ligeiramente mais afastadas que a largura dos ombros.",
+      "Mantém o corpo numa linha reta, dos calcanhares à cabeça.",
+      "Desce controladamente até o peito quase tocar no chão.",
+      "Empurra o chão para regressar à posição inicial, expirando.",
+    ],
+    muscles: ["Peitoral", "Tríceps", "Deltoides anteriores", "Core"],
+    mistakes: [
+      "Deixar a anca cair ou levantar demasiado.",
+      "Cotovelos abertos a 90° em relação ao tronco.",
+      "Amplitude curta, sem descer o suficiente.",
+    ],
+    tips: [
+      "Mantém o olhar ligeiramente à frente, não para baixo.",
+      "Aperta os glúteos e o abdómen para estabilizar o tronco.",
+      "Cotovelos a cerca de 45° do corpo.",
+    ],
+  },
+  {
+    id: "reverse-snow-angels",
+    name: "Reverse Snow Angels",
+    target: "Costas · Ombros",
+    howTo: [
+      "Deita-te de barriga para baixo com os braços ao longo do corpo.",
+      "Eleva ligeiramente o peito e mantém o pescoço neutro.",
+      "Desliza os braços em arco até acima da cabeça, palmas para baixo.",
+      "Regressa lentamente à posição inicial mantendo tensão.",
+    ],
+    muscles: ["Trapézio inferior", "Romboides", "Deltoides posteriores"],
+    mistakes: [
+      "Usar impulso em vez de controlo muscular.",
+      "Levantar demasiado o pescoço e a cabeça.",
+      "Dobrar os cotovelos durante o movimento.",
+    ],
+    tips: [
+      "Movimento lento e deliberado, sente as escápulas a trabalhar.",
+      "Mantém os braços o mais retos possível.",
+      "Respira de forma constante ao longo da série.",
+    ],
+  },
+  {
+    id: "pike-push-ups",
+    name: "Pike Push-ups",
+    target: "Ombros",
+    howTo: [
+      "Começa em posição de V invertido, anca elevada.",
+      "Mãos à largura dos ombros, calcanhares em direção ao chão.",
+      "Dobra os cotovelos e desce a cabeça em direção ao solo.",
+      "Empurra para cima até esticar os braços novamente.",
+    ],
+    muscles: ["Deltoides", "Tríceps", "Trapézio superior"],
+    mistakes: [
+      "Anca demasiado baixa, transformando em flexão normal.",
+      "Cabeça a avançar em vez de descer a direito.",
+      "Amplitude insuficiente no movimento.",
+    ],
+    tips: [
+      "Quanto mais vertical o tronco, mais difícil o exercício.",
+      "Mantém o core ativo para não arquear as costas.",
+      "Foca-te em descer a cabeça entre as mãos.",
+    ],
+  },
+  {
+    id: "dips",
+    name: "Dips",
+    target: "Tríceps · Peito",
+    howTo: [
+      "Apoia as mãos numa superfície estável atrás de ti.",
+      "Estica as pernas ou dobra os joelhos para regular a dificuldade.",
+      "Desce dobrando os cotovelos até cerca de 90°.",
+      "Empurra para cima até esticar os braços.",
+    ],
+    muscles: ["Tríceps", "Peitoral inferior", "Deltoides anteriores"],
+    mistakes: [
+      "Descer demasiado e sobrecarregar os ombros.",
+      "Afastar a anca da superfície de apoio.",
+      "Cotovelos a abrir para fora.",
+    ],
+    tips: [
+      "Mantém as costas próximas do apoio durante o movimento.",
+      "Ombros para baixo e para trás, longe das orelhas.",
+      "Controla a descida, não deixes cair.",
+    ],
+  },
+  {
+    id: "agachamentos",
+    name: "Agachamentos",
+    target: "Pernas · Glúteos",
+    howTo: [
+      "Pés à largura dos ombros, pontas ligeiramente para fora.",
+      "Desce empurrando a anca para trás e para baixo.",
+      "Mantém o peito erguido e os joelhos alinhados com os pés.",
+      "Sobe empurrando o chão pelos calcanhares.",
+    ],
+    muscles: ["Quadríceps", "Glúteos", "Isquiotibiais"],
+    mistakes: [
+      "Joelhos a colapsar para dentro.",
+      "Levantar os calcanhares do chão.",
+      "Curvar as costas na descida.",
+    ],
+    tips: [
+      "Desce pelo menos até as coxas ficarem paralelas ao chão.",
+      "Distribui o peso por todo o pé.",
+      "Mantém o core contraído durante todo o movimento.",
+    ],
+  },
+  {
+    id: "bulgarian-split-squats",
+    name: "Bulgarian Split Squats",
+    target: "Pernas · Glúteos",
+    howTo: [
+      "Coloca o pé de trás elevado numa superfície estável.",
+      "O pé da frente fica bem à frente, joelho alinhado.",
+      "Desce verticalmente até a coxa da frente ficar paralela.",
+      "Sobe empurrando pelo calcanhar da perna da frente.",
+    ],
+    muscles: ["Quadríceps", "Glúteos", "Adutores", "Core"],
+    mistakes: [
+      "Inclinar o tronco demasiado para a frente.",
+      "Joelho da frente a ultrapassar muito a ponta do pé.",
+      "Perder o equilíbrio por base demasiado estreita.",
+    ],
+    tips: [
+      "Faz todas as repetições de uma perna antes de trocar.",
+      "Usa uma parede para equilíbrio se necessário.",
+      "Movimento vertical, sobe e desce a direito.",
+    ],
+  },
+  {
+    id: "elevacoes-gemeos",
+    name: "Elevações de gémeos",
+    target: "Gémeos",
+    howTo: [
+      "Fica em pé, de preferência com a ponta dos pés numa elevação.",
+      "Sobe o mais alto possível sobre as pontas dos pés.",
+      "Faz uma pausa curta no topo, contraindo os gémeos.",
+      "Desce lentamente até sentir o alongamento.",
+    ],
+    muscles: ["Gastrocnémio", "Solear"],
+    mistakes: [
+      "Fazer repetições demasiado rápidas com impulso.",
+      "Amplitude curta, sem subir totalmente.",
+      "Não alongar na parte de baixo.",
+    ],
+    tips: [
+      "Pausa de um segundo no topo de cada repetição.",
+      "Mantém as pernas quase esticadas.",
+      "Apoia-te numa parede para equilíbrio.",
+    ],
+  },
+  {
+    id: "reverse-crunches",
+    name: "Reverse Crunches",
+    target: "Abdominais",
+    howTo: [
+      "Deita-te de costas com os joelhos dobrados.",
+      "Coloca as mãos ao lado do corpo ou sob a lombar.",
+      "Puxa os joelhos em direção ao peito, elevando a anca.",
+      "Desce controladamente sem tocar totalmente no chão.",
+    ],
+    muscles: ["Reto abdominal", "Abdómen inferior"],
+    mistakes: [
+      "Usar impulso das pernas em vez do abdómen.",
+      "Arquear a lombar durante o movimento.",
+      "Movimento demasiado rápido e descontrolado.",
+    ],
+    tips: [
+      "Foca a contração no abdómen inferior.",
+      "Mantém o movimento lento e controlado.",
+      "Expira ao elevar a anca.",
+    ],
+  },
+  {
+    id: "side-plank",
+    name: "Side Plank",
+    target: "Core · Oblíquos",
+    howTo: [
+      "Deita-te de lado, apoia o antebraço debaixo do ombro.",
+      "Empilha os pés e eleva a anca do chão.",
+      "Forma uma linha reta da cabeça aos pés.",
+      "Mantém a posição e depois troca de lado.",
+    ],
+    muscles: ["Oblíquos", "Core", "Glúteo médio"],
+    mistakes: [
+      "Deixar a anca descair para o chão.",
+      "Ombro colapsado sobre o cotovelo.",
+      "Rodar o tronco para a frente.",
+    ],
+    tips: [
+      "Cotovelo diretamente debaixo do ombro.",
+      "Aperta os glúteos para manter a linha.",
+      "Respira normalmente enquanto seguras.",
+    ],
+  },
+  {
+    id: "burpees",
+    name: "Burpees",
+    target: "Corpo inteiro",
+    howTo: [
+      "Começa em pé, desce para agachamento com as mãos no chão.",
+      "Salta com os pés para trás para posição de prancha.",
+      "Faz uma flexão (opcional) e salta os pés de volta.",
+      "Salta verticalmente com os braços acima da cabeça.",
+    ],
+    muscles: ["Corpo inteiro", "Cardiovascular", "Core"],
+    mistakes: [
+      "Anca a subir demasiado na posição de prancha.",
+      "Aterrar com os joelhos rígidos após o salto.",
+      "Perder a postura por fadiga.",
+    ],
+    tips: [
+      "Mantém um ritmo constante e sustentável.",
+      "Aterra suave, com os joelhos ligeiramente dobrados.",
+      "Remove o salto para uma versão mais leve.",
+    ],
+  },
+]

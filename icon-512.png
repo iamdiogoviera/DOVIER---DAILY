@@ -1,0 +1,42 @@
+const MESSAGES = [
+  "A disciplina é a ponte entre os objetivos e as conquistas.",
+  "Um dia de cada vez. Hoje é o teu dia.",
+  "O corpo alcança o que a mente acredita.",
+  "Não pares quando estás cansado. Para quando terminares.",
+  "Pequenos progressos diários somam grandes resultados.",
+  "A dor de hoje é a força de amanhã.",
+  "Sê mais forte que a tua melhor desculpa.",
+  "O sucesso começa com a decisão de tentar.",
+  "Cada repetição conta. Cada dia importa.",
+  "A consistência vence o talento quando o talento não é consistente.",
+  "Faz hoje o que os outros não fazem, para teres o que os outros não têm.",
+  "A tua única competição és tu de ontem.",
+  "Suar hoje é sorrir amanhã.",
+  "Não contes os dias, faz os dias contar.",
+  "A motivação leva-te ao início. O hábito mantém-te.",
+  "Grandes coisas nunca vieram de zonas de conforto.",
+  "Acredita em ti e o resto seguirá.",
+  "O esforço de hoje é a vitória de amanhã.",
+  "Não desistas. O começo é sempre o mais difícil.",
+  "A energia e a persistência conquistam tudo.",
+  "Transforma o 'não consigo' em 'já consegui'.",
+  "Cada treino é um depósito na tua saúde futura.",
+  "A força não vem do que consegues fazer, mas de superar o que pensavas não conseguir.",
+  "O único treino mau é aquele que não aconteceu.",
+  "Foca-te no progresso, não na perfeição.",
+  "Levanta-te, aparece e nunca desistas.",
+  "A jornada de mil quilómetros começa com um único passo.",
+  "Hoje é uma nova oportunidade de te tornares melhor.",
+  "Os campeões treinam, os perdedores queixam-se.",
+  "O suor é apenas gordura a chorar.",
+  "Torna-te a versão mais forte de ti mesmo.",
+]
+
+// Deterministic message based on the calendar day so it changes daily
+// but stays the same throughout a given day.
+export function getDailyMessage(date = new Date()): string {
+  const start = new Date(date.getFullYear(), 0, 0)
+  const diff = date.getTime() - start.getTime()
+  const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24))
+  return MESSAGES[dayOfYear % MESSAGES.length]
+}
